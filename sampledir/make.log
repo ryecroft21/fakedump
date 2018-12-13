@@ -1,0 +1,1736 @@
+	CC = gcc
+	LD = ld
+	LDSHARED = gcc -shared
+	CFLAGS = -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict -std=gnu99 
+	XCFLAGS = -D_FORTIFY_SOURCE=2 -fstack-protector -fno-strict-overflow -fvisibility=hidden -fexcess-precision=standard -DRUBY_EXPORT -fPIE
+	CPPFLAGS =   -I. -I.ext/include/x86_64-linux -I./include -I. -I./enc/unicode/10.0.0
+	DLDFLAGS = -Wl,--compress-debug-sections=zlib -fstack-protector -pie  
+	SOLIBS = 
+	LANG = ja_JP.UTF-8
+	LC_ALL = 
+	LC_CTYPE = 
+gcc (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+compiling ./main.c
+compiling dmydln.c
+compiling miniinit.c
+compiling dmyext.c
+compiling miniprelude.c
+making dummy probes.h
+compiling array.c
+compiling bignum.c
+compiling class.c
+compiling compar.c
+compiling compile.c
+compile.c: In function ‘iseq_ibf_load’:
+compile.c:9516:21: warning: passing argument 1 of ‘iseq_init_trace’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     iseq_init_trace(iseq);
+                     ^~~~
+In file included from compile.c:19:0:
+iseq.h:163:6: note: expected ‘rb_iseq_t * {aka struct rb_iseq_struct *}’ but argument is of type ‘const rb_iseq_t * {aka const struct rb_iseq_struct *}’
+ void iseq_init_trace(rb_iseq_t *iseq);
+      ^~~~~~~~~~~~~~~
+compile.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+compiling complex.c
+compiling cont.c
+compiling debug.c
+compiling debug_counter.c
+compiling dir.c
+compiling dln_find.c
+compiling encoding.c
+compiling enum.c
+compiling enumerator.c
+compiling error.c
+compiling eval.c
+compiling file.c
+compiling gc.c
+compiling hash.c
+compiling inits.c
+compiling io.c
+compiling iseq.c
+compiling load.c
+compiling marshal.c
+compiling math.c
+compiling node.c
+compiling numeric.c
+compiling object.c
+compiling pack.c
+compiling parse.c
+compiling proc.c
+compiling process.c
+compiling random.c
+compiling range.c
+compiling rational.c
+compiling re.c
+compiling regcomp.c
+compiling regenc.c
+compiling regerror.c
+compiling regexec.c
+compiling regparse.c
+compiling regsyntax.c
+compiling ruby.c
+compiling safe.c
+compiling signal.c
+compiling sprintf.c
+compiling st.c
+compiling strftime.c
+compiling string.c
+compiling struct.c
+compiling symbol.c
+compiling thread.c
+compiling time.c
+compiling transcode.c
+compiling util.c
+compiling variable.c
+compiling version.c
+compiling vm.c
+compiling vm_backtrace.c
+compiling vm_dump.c
+compiling vm_trace.c
+compiling enc/ascii.c
+compiling enc/us_ascii.c
+compiling enc/unicode.c
+compiling enc/utf_8.c
+compiling enc/trans/newline.c
+compiling ./missing/setproctitle.c
+compiling ./missing/strlcat.c
+compiling ./missing/strlcpy.c
+compiling addr2line.c
+compiling dmyenc.c
+linking miniruby
+generating encdb.h
+encdb.h updated
+./tool/ifchange "--timestamp=.rbconfig.time" rbconfig.rb rbconfig.tmp
+rbconfig.rb updated
+generating enc.mk
+making srcs under enc
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' に入ります
+make[1]: 'srcs' に対して行うべき事はありません.
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' から出ます
+generating transdb.h
+transdb.h updated
+compiling dln.c
+compiling localeinit.c
+creating verconf.h
+verconf.h updated
+compiling loadpath.c
+compiling prelude.c
+linking static-library libruby-static.a
+generating makefiles ext/configure-ext.mk
+ext/configure-ext.mk updated
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' に入ります
+configuring -test-/array/resize
+configuring -test-/bignum
+configuring -test-/bug-3571
+configuring -test-/bug-5832
+configuring -test-/bug_reporter
+configuring -test-/class
+configuring -test-/debug
+configuring -test-/dln/empty
+configuring -test-/exception
+configuring -test-/fatal
+configuring -test-/file
+configuring -test-/float
+configuring -test-/funcall
+configuring -test-/gvl/call_without_gvl
+configuring -test-/hash
+configuring -test-/integer
+configuring -test-/iseq_load
+configuring -test-/iter
+configuring -test-/load/dot.dot
+configuring -test-/load/protect
+configuring -test-/marshal/compat
+configuring -test-/marshal/internal_ivar
+configuring -test-/marshal/usr
+configuring -test-/memory_status
+configuring -test-/method
+configuring -test-/notimplement
+configuring -test-/num2int
+configuring -test-/path_to_class
+configuring -test-/popen_deadlock
+configuring -test-/postponed_job
+configuring -test-/printf
+configuring -test-/proc
+configuring -test-/rational
+configuring -test-/recursion
+configuring -test-/regexp
+configuring -test-/scan_args
+configuring -test-/st/foreach
+configuring -test-/st/numhash
+configuring -test-/st/update
+configuring -test-/string
+configuring -test-/struct
+configuring -test-/symbol
+configuring -test-/thread_fd_close
+configuring -test-/time
+configuring -test-/tracepoint
+configuring -test-/typeddata
+configuring -test-/vm
+configuring -test-/wait_for_single_fd
+configuring bigdecimal
+configuring cgi/escape
+configuring continuation
+configuring coverage
+configuring date
+configuring dbm
+configuring digest
+configuring digest/bubblebabble
+configuring digest/md5
+configuring digest/rmd160
+configuring digest/sha1
+configuring digest/sha2
+configuring etc
+configuring fcntl
+configuring fiber
+configuring fiddle
+configuring gdbm
+configuring io/console
+configuring io/nonblock
+configuring io/wait
+configuring json
+configuring json/generator
+configuring json/parser
+configuring nkf
+configuring objspace
+configuring openssl
+configuring pathname
+configuring psych
+configuring pty
+configuring racc/cparse
+configuring rbconfig/sizeof
+configuring readline
+configuring ripper
+configuring rubyvm
+configuring sdbm
+configuring socket
+configuring stringio
+configuring strscan
+configuring syslog
+configuring zlib
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' から出ます
+generating makefile exts.mk
+exts.mk updated
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' に入ります
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/array/resize' に入ります
+compiling resize.c
+linking shared-object -test-/array/resize.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/array/resize' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/bignum' に入ります
+compiling big2str.c
+compiling bigzero.c
+compiling div.c
+compiling init.c
+compiling intpack.c
+compiling mul.c
+compiling str2big.c
+linking shared-object -test-/bignum.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/bignum' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/bug-3571' に入ります
+compiling bug.c
+linking shared-object -test-/bug_3571.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/bug-3571' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/bug-5832' に入ります
+compiling bug.c
+linking shared-object -test-/bug_5832.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/bug-5832' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/bug_reporter' に入ります
+compiling bug_reporter.c
+linking shared-object -test-/bug_reporter.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/bug_reporter' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/class' に入ります
+compiling class2name.c
+compiling init.c
+linking shared-object -test-/class.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/class' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/debug' に入ります
+compiling init.c
+compiling inspector.c
+compiling profile_frames.c
+linking shared-object -test-/debug.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/debug' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/dln/empty' に入ります
+compiling empty.c
+linking shared-object -test-/dln/empty.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/dln/empty' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/exception' に入ります
+compiling dataerror.c
+compiling enc_raise.c
+compiling ensured.c
+compiling init.c
+linking shared-object -test-/exception.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/exception' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/fatal' に入ります
+compiling rb_fatal.c
+linking shared-object -test-/fatal/rb_fatal.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/fatal' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/file' に入ります
+compiling fs.c
+compiling init.c
+compiling stat.c
+linking shared-object -test-/file.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/file' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/float' に入ります
+compiling init.c
+compiling nextafter.c
+linking shared-object -test-/float.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/float' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/funcall' に入ります
+compiling funcall.c
+linking shared-object -test-/funcall.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/funcall' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/gvl/call_without_gvl' に入ります
+compiling call_without_gvl.c
+linking shared-object -test-/gvl/call_without_gvl.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/gvl/call_without_gvl' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/hash' に入ります
+compiling delete.c
+compiling init.c
+linking shared-object -test-/hash.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/hash' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/integer' に入ります
+compiling core_ext.c
+compiling init.c
+compiling my_integer.c
+linking shared-object -test-/integer.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/integer' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/iseq_load' に入ります
+compiling iseq_load.c
+linking shared-object -test-/iseq_load.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/iseq_load' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/iter' に入ります
+compiling break.c
+compiling init.c
+compiling yield.c
+linking shared-object -test-/iter.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/iter' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/load/dot.dot' に入ります
+compiling dot.dot.c
+linking shared-object -test-/load/dot.dot.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/load/dot.dot' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/load/protect' に入ります
+compiling protect.c
+linking shared-object -test-/load/protect.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/load/protect' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/marshal/compat' に入ります
+compiling usrcompat.c
+linking shared-object -test-/marshal/compat.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/marshal/compat' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/marshal/internal_ivar' に入ります
+compiling internal_ivar.c
+linking shared-object -test-/marshal/internal_ivar.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/marshal/internal_ivar' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/marshal/usr' に入ります
+compiling usrmarshal.c
+linking shared-object -test-/marshal/usr.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/marshal/usr' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/method' に入ります
+compiling arity.c
+compiling init.c
+linking shared-object -test-/method.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/method' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/notimplement' に入ります
+compiling bug.c
+linking shared-object -test-/notimplement.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/notimplement' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/num2int' に入ります
+compiling num2int.c
+linking shared-object -test-/num2int.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/num2int' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/path_to_class' に入ります
+compiling path_to_class.c
+linking shared-object -test-/path_to_class.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/path_to_class' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/popen_deadlock' に入ります
+compiling infinite_loop_dlsym.c
+linking shared-object -test-/popen_deadlock/infinite_loop_dlsym.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/popen_deadlock' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/postponed_job' に入ります
+compiling postponed_job.c
+linking shared-object -test-/postponed_job.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/postponed_job' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/printf' に入ります
+compiling printf.c
+linking shared-object -test-/printf.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/printf' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/proc' に入ります
+compiling init.c
+compiling receiver.c
+compiling super.c
+linking shared-object -test-/proc.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/proc' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/rational' に入ります
+compiling rat.c
+linking shared-object -test-/rational.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/rational' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/recursion' に入ります
+compiling recursion.c
+linking shared-object -test-/recursion.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/recursion' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/regexp' に入ります
+compiling init.c
+compiling parse_depth_limit.c
+linking shared-object -test-/regexp.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/regexp' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/scan_args' に入ります
+compiling scan_args.c
+linking shared-object -test-/scan_args.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/scan_args' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/st/foreach' に入ります
+compiling foreach.c
+linking shared-object -test-/st/foreach.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/st/foreach' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/st/numhash' に入ります
+compiling numhash.c
+linking shared-object -test-/st/numhash.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/st/numhash' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/st/update' に入ります
+compiling update.c
+linking shared-object -test-/st/update.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/st/update' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/string' に入ります
+compiling capacity.c
+compiling coderange.c
+compiling cstr.c
+compiling ellipsize.c
+compiling enc_associate.c
+compiling enc_str_buf_cat.c
+compiling fstring.c
+compiling init.c
+compiling modify.c
+compiling new.c
+compiling nofree.c
+compiling normalize.c
+compiling qsort.c
+compiling set_len.c
+linking shared-object -test-/string.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/string' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/struct' に入ります
+compiling duplicate.c
+compiling init.c
+compiling len.c
+compiling member.c
+linking shared-object -test-/struct.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/struct' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/symbol' に入ります
+compiling init.c
+compiling type.c
+linking shared-object -test-/symbol.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/symbol' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/thread_fd_close' に入ります
+compiling thread_fd_close.c
+linking shared-object -test-/thread_fd_close.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/thread_fd_close' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/time' に入ります
+compiling init.c
+compiling new.c
+linking shared-object -test-/time.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/time' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/tracepoint' に入ります
+compiling gc_hook.c
+compiling tracepoint.c
+linking shared-object -test-/tracepoint.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/tracepoint' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/typeddata' に入ります
+compiling typeddata.c
+linking shared-object -test-/typeddata.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/typeddata' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/vm' に入ります
+compiling at_exit.c
+linking shared-object -test-/vm/at_exit.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/vm' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/wait_for_single_fd' に入ります
+compiling wait_for_single_fd.c
+linking shared-object -test-/wait_for_single_fd.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/-test-/wait_for_single_fd' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/bigdecimal' に入ります
+compiling bigdecimal.c
+linking shared-object bigdecimal.so
+installing default bigdecimal libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/bigdecimal' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/cgi/escape' に入ります
+compiling escape.c
+linking shared-object cgi/escape.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/cgi/escape' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/continuation' に入ります
+compiling continuation.c
+linking shared-object continuation.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/continuation' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/coverage' に入ります
+compiling coverage.c
+linking shared-object coverage.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/coverage' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/date' に入ります
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.so
+installing default date_core libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/date' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/digest' に入ります
+compiling digest.c
+linking shared-object digest.so
+installing digest libraries
+installing default digest libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/digest' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/digest/bubblebabble' に入ります
+compiling bubblebabble.c
+linking shared-object digest/bubblebabble.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/digest/bubblebabble' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/digest/md5' に入ります
+compiling md5init.c
+compiling md5.c
+linking shared-object digest/md5.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/digest/md5' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/digest/rmd160' に入ります
+compiling rmd160init.c
+compiling rmd160.c
+linking shared-object digest/rmd160.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/digest/rmd160' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/digest/sha1' に入ります
+compiling sha1init.c
+compiling sha1.c
+linking shared-object digest/sha1.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/digest/sha1' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/digest/sha2' に入ります
+compiling sha2init.c
+compiling sha2.c
+linking shared-object digest/sha2.so
+installing default sha2 libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/digest/sha2' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/etc' に入ります
+generating constant definitions
+compiling etc.c
+linking shared-object etc.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/etc' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fcntl' に入ります
+compiling fcntl.c
+linking shared-object fcntl.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fcntl' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiber' に入ります
+compiling fiber.c
+linking shared-object fiber.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiber' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle' に入ります
+compiling closure.c
+compiling conversions.c
+compiling fiddle.c
+compiling function.c
+compiling handle.c
+compiling pointer.c
+make[3]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle/libffi-3.2.1' に入ります
+make 'AR_FLAGS=' 'CC_FOR_BUILD=' 'CFLAGS=-O3 -ggdb3  -Wall -fexceptions' 'CXXFLAGS=-O3 -ggdb3 ' 'CFLAGS_FOR_BUILD=' 'CFLAGS_FOR_TARGET=' 'INSTALL=/usr/bin/install -c' 'INSTALL_DATA=/usr/bin/install -c -m 644' 'INSTALL_PROGRAM=/usr/bin/install -c' 'INSTALL_SCRIPT=/usr/bin/install -c' 'JC1FLAGS=' 'LDFLAGS=-L. -fstack-protector -rdynamic -Wl,-export-dynamic  -L../../.. ' 'LIBCFLAGS=' 'LIBCFLAGS_FOR_TARGET=' 'MAKE=make' 'MAKEINFO=/bin/bash /home/foobar/temp/ruby-2.5.3/ext/fiddle/libffi-3.2.1/missing makeinfo ' 'PICFLAG=' 'PICFLAG_FOR_TARGET=' 'RUNTESTFLAGS=' 'SHELL=/bin/bash' 'exec_prefix=/usr/local' 'infodir=/usr/local/share/info' 'libdir=/usr/local/lib' 'mandir=/usr/local/share/man' 'prefix=/usr/local' 'AR=ar' 'AS=as' 'CC=gcc' 'CXX=g++' 'LD=ld -m elf_x86_64' 'NM=nm' 'RANLIB=ranlib' 'DESTDIR=' all-recursive
+make[4]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle/libffi-3.2.1' に入ります
+Making all in include
+make[5]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle/libffi-3.2.1/include' に入ります
+make[5]: 'all' に対して行うべき事はありません.
+make[5]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle/libffi-3.2.1/include' から出ます
+Making all in testsuite
+make[5]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle/libffi-3.2.1/testsuite' に入ります
+make[5]: 'all' に対して行うべき事はありません.
+make[5]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle/libffi-3.2.1/testsuite' から出ます
+Making all in man
+make[5]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle/libffi-3.2.1/man' に入ります
+make[5]: 'all' に対して行うべき事はありません.
+make[5]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle/libffi-3.2.1/man' から出ます
+make[5]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle/libffi-3.2.1' に入ります
+  CC       src/prep_cif.lo
+  CC       src/types.lo
+  CC       src/raw_api.lo
+  CC       src/java_raw_api.lo
+  CC       src/closures.lo
+src/closures.c: In function 'dlmmap_locked':
+src/closures.c:488:7: warning: ignoring return value of 'ftruncate', declared with attribute warn_unused_result [-Wunused-result]
+       ftruncate (execfd, offset);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+src/closures.c:500:7: warning: ignoring return value of 'ftruncate', declared with attribute warn_unused_result [-Wunused-result]
+       ftruncate (execfd, offset);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC       src/x86/ffi64.lo
+  CPPAS    src/x86/unix64.lo
+  CC       src/x86/ffi.lo
+  CPPAS    src/x86/sysv.lo
+  CCLD     libffi_convenience.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CCLD     libffi.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[5]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle/libffi-3.2.1' から出ます
+make[4]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle/libffi-3.2.1' から出ます
+make[3]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle/libffi-3.2.1' から出ます
+linking shared-object fiddle.so
+installing default fiddle libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/fiddle' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/io/console' に入ります
+compiling console.c
+linking shared-object io/console.so
+installing default console libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/io/console' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/io/nonblock' に入ります
+compiling nonblock.c
+linking shared-object io/nonblock.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/io/nonblock' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/io/wait' に入ります
+compiling wait.c
+linking shared-object io/wait.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/io/wait' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/json' に入ります
+installing default libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/json' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/json/generator' に入ります
+compiling generator.c
+linking shared-object json/ext/generator.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/json/generator' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/json/parser' に入ります
+compiling parser.c
+linking shared-object json/ext/parser.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/json/parser' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/nkf' に入ります
+compiling nkf.c
+linking shared-object nkf.so
+installing default nkf libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/nkf' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/objspace' に入ります
+compiling object_tracing.c
+compiling objspace.c
+compiling objspace_dump.c
+linking shared-object objspace.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/objspace' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/pathname' に入ります
+compiling pathname.c
+linking shared-object pathname.so
+installing default pathname libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/pathname' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/psych' に入ります
+compiling psych.c
+compiling psych_emitter.c
+compiling psych_parser.c
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+compiling ../.././ext/psych/yaml/api.c
+../.././ext/psych/yaml/api.c: In function ‘yaml_document_delete’:
+../.././ext/psych/yaml/api.c:1121:7: warning: variable ‘context’ set but not used [-Wunused-but-set-variable]
+     } context;
+       ^~~~~~~
+../.././ext/psych/yaml/api.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+compiling ../.././ext/psych/yaml/dumper.c
+compiling ../.././ext/psych/yaml/emitter.c
+compiling ../.././ext/psych/yaml/loader.c
+compiling ../.././ext/psych/yaml/parser.c
+compiling ../.././ext/psych/yaml/reader.c
+compiling ../.././ext/psych/yaml/scanner.c
+compiling ../.././ext/psych/yaml/writer.c
+linking shared-object psych.so
+installing default psych libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/psych' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/pty' に入ります
+compiling pty.c
+linking shared-object pty.so
+installing default pty libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/pty' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/racc/cparse' に入ります
+compiling cparse.c
+linking shared-object racc/cparse.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/racc/cparse' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/rbconfig/sizeof' に入ります
+compiling sizes.c
+compiling limits.c
+linking shared-object rbconfig/sizeof.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/rbconfig/sizeof' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/ripper' に入ります
+compiling ripper.c
+linking shared-object ripper.so
+installing default ripper libraries
+checking ../.././parse.y and ../.././ext/ripper/eventids2.c
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/ripper' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/rubyvm' に入ります
+installing default libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/rubyvm' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/sdbm' に入ります
+compiling _sdbm.c
+compiling init.c
+linking shared-object sdbm.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/sdbm' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/socket' に入ります
+compiling init.c
+compiling constants.c
+compiling basicsocket.c
+compiling socket.c
+compiling ipsocket.c
+compiling tcpsocket.c
+compiling tcpserver.c
+compiling sockssocket.c
+compiling udpsocket.c
+compiling unixsocket.c
+compiling unixserver.c
+compiling option.c
+compiling ancdata.c
+compiling raddrinfo.c
+compiling ifaddr.c
+linking shared-object socket.so
+installing default socket libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/socket' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/stringio' に入ります
+compiling stringio.c
+linking shared-object stringio.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/stringio' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/strscan' に入ります
+compiling strscan.c
+linking shared-object strscan.so
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/strscan' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/syslog' に入ります
+compiling syslog.c
+linking shared-object syslog.so
+installing default syslog libraries
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3/ext/syslog' から出ます
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' に入ります
+linking ruby
+make[2]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' から出ます
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' から出ます
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' に入ります
+*** Following extensions are not compiled:
+dbm:
+	Could not be configured. It will not be installed.
+	Check ext/dbm/mkmf.log for more details.
+gdbm:
+	Could not be configured. It will not be installed.
+	Check ext/gdbm/mkmf.log for more details.
+openssl:
+	Could not be configured. It will not be installed.
+	/home/foobar/temp/ruby-2.5.3/ext/openssl/extconf.rb:97: OpenSSL library could not be found. You might want to use --with-openssl-dir=<dir> option to specify the prefix where OpenSSL is installed.
+	Check ext/openssl/mkmf.log for more details.
+readline:
+	Could not be configured. It will not be installed.
+	/home/foobar/temp/ruby-2.5.3/ext/readline/extconf.rb:62: Neither readline nor libedit was found
+	Check ext/readline/mkmf.log for more details.
+zlib:
+	Could not be configured. It will not be installed.
+	Check ext/zlib/mkmf.log for more details.
+*** Fix the problems, then remove these directories and try again if you want.
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' から出ます
+making enc
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' に入ります
+compiling ./enc/encdb.c
+linking encoding encdb.so
+compiling ./enc/big5.c
+linking encoding big5.so
+compiling ./enc/cp949.c
+linking encoding cp949.so
+compiling ./enc/emacs_mule.c
+linking encoding emacs_mule.so
+compiling ./enc/euc_jp.c
+linking encoding euc_jp.so
+compiling ./enc/euc_kr.c
+linking encoding euc_kr.so
+compiling ./enc/euc_tw.c
+linking encoding euc_tw.so
+compiling ./enc/gb2312.c
+linking encoding gb2312.so
+compiling ./enc/gb18030.c
+linking encoding gb18030.so
+compiling ./enc/gbk.c
+linking encoding gbk.so
+compiling ./enc/iso_8859_1.c
+linking encoding iso_8859_1.so
+compiling ./enc/iso_8859_2.c
+linking encoding iso_8859_2.so
+compiling ./enc/iso_8859_3.c
+linking encoding iso_8859_3.so
+compiling ./enc/iso_8859_4.c
+linking encoding iso_8859_4.so
+compiling ./enc/iso_8859_5.c
+linking encoding iso_8859_5.so
+compiling ./enc/iso_8859_6.c
+linking encoding iso_8859_6.so
+compiling ./enc/iso_8859_7.c
+linking encoding iso_8859_7.so
+compiling ./enc/iso_8859_8.c
+linking encoding iso_8859_8.so
+compiling ./enc/iso_8859_9.c
+linking encoding iso_8859_9.so
+compiling ./enc/iso_8859_10.c
+linking encoding iso_8859_10.so
+compiling ./enc/iso_8859_11.c
+linking encoding iso_8859_11.so
+compiling ./enc/iso_8859_13.c
+linking encoding iso_8859_13.so
+compiling ./enc/iso_8859_14.c
+linking encoding iso_8859_14.so
+compiling ./enc/iso_8859_15.c
+linking encoding iso_8859_15.so
+compiling ./enc/iso_8859_16.c
+linking encoding iso_8859_16.so
+compiling ./enc/koi8_r.c
+linking encoding koi8_r.so
+compiling ./enc/koi8_u.c
+linking encoding koi8_u.so
+compiling ./enc/shift_jis.c
+linking encoding shift_jis.so
+compiling ./enc/utf_16be.c
+linking encoding utf_16be.so
+compiling ./enc/utf_16le.c
+linking encoding utf_16le.so
+compiling ./enc/utf_32be.c
+linking encoding utf_32be.so
+compiling ./enc/utf_32le.c
+linking encoding utf_32le.so
+compiling ./enc/windows_31j.c
+linking encoding windows_31j.so
+compiling ./enc/windows_1250.c
+linking encoding windows_1250.so
+compiling ./enc/windows_1251.c
+linking encoding windows_1251.so
+compiling ./enc/windows_1252.c
+linking encoding windows_1252.so
+compiling ./enc/windows_1253.c
+linking encoding windows_1253.so
+compiling ./enc/windows_1254.c
+linking encoding windows_1254.so
+compiling ./enc/windows_1257.c
+linking encoding windows_1257.so
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' から出ます
+making trans
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' に入ります
+compiling ./enc/trans/transdb.c
+linking transcoder transdb.so
+compiling ./enc/trans/big5.c
+linking transcoder big5.so
+compiling ./enc/trans/chinese.c
+linking transcoder chinese.so
+compiling ./enc/trans/ebcdic.c
+linking transcoder ebcdic.so
+compiling ./enc/trans/emoji.c
+linking transcoder emoji.so
+compiling ./enc/trans/emoji_iso2022_kddi.c
+linking transcoder emoji_iso2022_kddi.so
+compiling ./enc/trans/emoji_sjis_docomo.c
+linking transcoder emoji_sjis_docomo.so
+compiling ./enc/trans/emoji_sjis_kddi.c
+linking transcoder emoji_sjis_kddi.so
+compiling ./enc/trans/emoji_sjis_softbank.c
+linking transcoder emoji_sjis_softbank.so
+compiling ./enc/trans/escape.c
+linking transcoder escape.so
+compiling ./enc/trans/gb18030.c
+linking transcoder gb18030.so
+compiling ./enc/trans/gbk.c
+linking transcoder gbk.so
+compiling ./enc/trans/iso2022.c
+linking transcoder iso2022.so
+compiling ./enc/trans/japanese.c
+linking transcoder japanese.so
+compiling ./enc/trans/japanese_euc.c
+linking transcoder japanese_euc.so
+compiling ./enc/trans/japanese_sjis.c
+linking transcoder japanese_sjis.so
+compiling ./enc/trans/korean.c
+linking transcoder korean.so
+compiling ./enc/trans/single_byte.c
+linking transcoder single_byte.so
+compiling ./enc/trans/utf8_mac.c
+linking transcoder utf8_mac.so
+compiling ./enc/trans/utf_16_32.c
+linking transcoder utf_16_32.so
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' から出ます
+making encs
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' に入ります
+make[1]: 'encs' に対して行うべき事はありません.
+make[1]: ディレクトリ '/home/foobar/temp/ruby-2.5.3' から出ます
+Generating RDoc documentation
+Parsing sources...
+  0% [ 1/871]  /home/foobar/temp/ruby-2.5.3/doc/NEWS-1.8.7
+  0% [ 2/871]  /home/foobar/temp/ruby-2.5.3/doc/NEWS-1.9.1
+  0% [ 3/871]  /home/foobar/temp/ruby-2.5.3/doc/NEWS-1.9.2
+  0% [ 4/871]  /home/foobar/temp/ruby-2.5.3/doc/NEWS-1.9.3
+  0% [ 5/871]  /home/foobar/temp/ruby-2.5.3/doc/NEWS-2.0.0
+  0% [ 6/871]  /home/foobar/temp/ruby-2.5.3/doc/NEWS-2.1.0
+  0% [ 7/871]  /home/foobar/temp/ruby-2.5.3/doc/NEWS-2.2.0
+  0% [ 8/871]  /home/foobar/temp/ruby-2.5.3/doc/NEWS-2.3.0
+  1% [ 9/871]  /home/foobar/temp/ruby-2.5.3/doc/NEWS-2.4.0
+  1% [10/871]  /home/foobar/temp/ruby-2.5.3/doc/contributing.rdoc
+  1% [11/871]  /home/foobar/temp/ruby-2.5.3/doc/contributors.rdoc
+  1% [12/871]  /home/foobar/temp/ruby-2.5.3/doc/dtrace_probes.rdoc
+  1% [13/871]  /home/foobar/temp/ruby-2.5.3/doc/extension.ja.rdoc
+  1% [14/871]  /home/foobar/temp/ruby-2.5.3/doc/extension.rdoc
+  1% [15/871]  /home/foobar/temp/ruby-2.5.3/doc/globals.rdoc
+  1% [16/871]  /home/foobar/temp/ruby-2.5.3/doc/keywords.rdoc
+  1% [17/871]  /home/foobar/temp/ruby-2.5.3/doc/maintainers.rdoc
+  2% [18/871]  /home/foobar/temp/ruby-2.5.3/doc/marshal.rdoc
+  2% [19/871]  /home/foobar/temp/ruby-2.5.3/doc/regexp.rdoc
+  2% [20/871]  /home/foobar/temp/ruby-2.5.3/doc/security.rdoc
+  2% [21/871]  /home/foobar/temp/ruby-2.5.3/doc/standard_library.rdoc
+  2% [22/871]  /home/foobar/temp/ruby-2.5.3/doc/syntax.rdoc
+  2% [23/871]  /home/foobar/temp/ruby-2.5.3/doc/syntax/assignment.rdoc
+  2% [24/871]  /home/foobar/temp/ruby-2.5.3/doc/syntax/calling_methods.rdoc
+  2% [25/871]  /home/foobar/temp/ruby-2.5.3/doc/syntax/control_expressions.rdoc
+  2% [26/871]  /home/foobar/temp/ruby-2.5.3/doc/syntax/exceptions.rdoc
+  3% [27/871]  /home/foobar/temp/ruby-2.5.3/doc/syntax/literals.rdoc
+  3% [28/871]  /home/foobar/temp/ruby-2.5.3/doc/syntax/methods.rdoc
+  3% [29/871]  /home/foobar/temp/ruby-2.5.3/doc/syntax/miscellaneous.rdoc
+  3% [30/871]  /home/foobar/temp/ruby-2.5.3/doc/syntax/modules_and_classes.rdoc
+  3% [31/871]  /home/foobar/temp/ruby-2.5.3/doc/syntax/precedence.rdoc
+  3% [32/871]  /home/foobar/temp/ruby-2.5.3/doc/syntax/refinements.rdoc
+  3% [33/871]  NEWS
+  3% [34/871]  README.ja.md
+  4% [35/871]  README.md
+  4% [36/871]  addr2line.c
+  4% [37/871]  array.c
+  4% [38/871]  bignum.c
+  4% [39/871]  class.c
+  4% [40/871]  compar.c
+  4% [41/871]  compile.c
+  4% [42/871]  complex.c
+  4% [43/871]  cont.c
+  5% [44/871]  debug.c
+  5% [45/871]  debug_counter.c
+  5% [46/871]  dir.c
+  5% [47/871]  dln.c
+  5% [48/871]  dln_find.c
+  5% [49/871]  dmydln.c
+  5% [50/871]  dmyenc.c
+  5% [51/871]  dmyext.c
+  5% [52/871]  doc/NEWS-1.8.7
+  6% [53/871]  doc/NEWS-1.9.1
+  6% [54/871]  doc/NEWS-1.9.2
+  6% [55/871]  doc/NEWS-1.9.3
+  6% [56/871]  doc/NEWS-2.0.0
+  6% [57/871]  doc/NEWS-2.1.0
+  6% [58/871]  doc/NEWS-2.2.0
+  6% [59/871]  doc/NEWS-2.3.0
+  6% [60/871]  doc/NEWS-2.4.0
+  7% [61/871]  doc/contributing.rdoc
+  7% [62/871]  doc/contributors.rdoc
+  7% [63/871]  doc/dtrace_probes.rdoc
+  7% [64/871]  doc/extension.ja.rdoc
+  7% [65/871]  doc/extension.rdoc
+  7% [66/871]  doc/globals.rdoc
+  7% [67/871]  doc/keywords.rdoc
+  7% [68/871]  doc/maintainers.rdoc
+  7% [69/871]  doc/marshal.rdoc
+  8% [70/871]  doc/regexp.rdoc
+  8% [71/871]  doc/security.rdoc
+  8% [72/871]  doc/standard_library.rdoc
+  8% [73/871]  doc/syntax.rdoc
+  8% [74/871]  doc/syntax/assignment.rdoc
+  8% [75/871]  doc/syntax/calling_methods.rdoc
+  8% [76/871]  doc/syntax/control_expressions.rdoc
+  8% [77/871]  doc/syntax/exceptions.rdoc
+  8% [78/871]  doc/syntax/literals.rdoc
+  9% [79/871]  doc/syntax/methods.rdoc
+  9% [80/871]  doc/syntax/miscellaneous.rdoc
+  9% [81/871]  doc/syntax/modules_and_classes.rdoc
+  9% [82/871]  doc/syntax/precedence.rdoc
+  9% [83/871]  doc/syntax/refinements.rdoc
+  9% [84/871]  encoding.c
+  9% [85/871]  enum.c
+  9% [86/871]  enumerator.c
+  9% [87/871]  error.c
+ 10% [88/871]  eval.c
+ 10% [89/871]  eval_error.c
+ 10% [90/871]  eval_jump.c
+ 10% [91/871]  ext/bigdecimal/bigdecimal.c
+ 10% [92/871]  ext/bigdecimal/lib/bigdecimal/jacobian.rb
+ 10% [93/871]  ext/bigdecimal/lib/bigdecimal/ludcmp.rb
+ 10% [94/871]  ext/bigdecimal/lib/bigdecimal/math.rb
+ 10% [95/871]  ext/bigdecimal/lib/bigdecimal/newton.rb
+ 11% [96/871]  ext/bigdecimal/lib/bigdecimal/util.rb
+ 11% [97/871]  ext/continuation/continuation.c
+ 11% [98/871]  ext/coverage/coverage.c
+ 11% [99/871]  ext/date/date_core.c
+ 11% [100/871]  ext/dbm/dbm.c
+ 11% [101/871]  ext/digest/bubblebabble/bubblebabble.c
+ 11% [102/871]  ext/digest/digest.c
+ 11% [103/871]  ext/digest/lib/digest.rb
+ 11% [104/871]  ext/digest/md5/md5init.c
+ 12% [105/871]  ext/digest/rmd160/rmd160init.c
+ 12% [106/871]  ext/digest/sha1/sha1init.c
+ 12% [107/871]  ext/digest/sha2/sha2init.c
+ 12% [108/871]  ext/etc/etc.c
+ 12% [109/871]  ext/fcntl/fcntl.c
+ 12% [110/871]  ext/fiber/fiber.c
+ 12% [111/871]  ext/fiddle/closure.c
+ 12% [112/871]  ext/fiddle/conversions.c
+ 12% [113/871]  ext/fiddle/fiddle.c
+ 13% [114/871]  ext/fiddle/function.c
+ 13% [115/871]  ext/fiddle/handle.c
+ 13% [116/871]  ext/fiddle/lib/fiddle.rb
+ 13% [117/871]  ext/fiddle/lib/fiddle/closure.rb
+ 13% [118/871]  ext/fiddle/lib/fiddle/cparser.rb
+ 13% [119/871]  ext/fiddle/lib/fiddle/function.rb
+ 13% [120/871]  ext/fiddle/lib/fiddle/import.rb
+ 13% [121/871]  ext/fiddle/lib/fiddle/pack.rb
+ 14% [122/871]  ext/fiddle/lib/fiddle/struct.rb
+ 14% [123/871]  ext/fiddle/lib/fiddle/types.rb
+ 14% [124/871]  ext/fiddle/lib/fiddle/value.rb
+ 14% [125/871]  ext/fiddle/pointer.c
+ 14% [126/871]  ext/gdbm/gdbm.c
+ 14% [127/871]  ext/io/console/console.c
+ 14% [128/871]  ext/io/nonblock/nonblock.c
+ 14% [129/871]  ext/io/wait/wait.c
+ 14% [130/871]  ext/json/generator/generator.c
+ 15% [131/871]  ext/json/lib/json.rb
+ 15% [132/871]  ext/json/lib/json/add/bigdecimal.rb
+ 15% [133/871]  ext/json/lib/json/add/complex.rb
+ 15% [134/871]  ext/json/lib/json/add/core.rb
+ 15% [135/871]  ext/json/lib/json/add/date.rb
+ 15% [136/871]  ext/json/lib/json/add/date_time.rb
+ 15% [137/871]  ext/json/lib/json/add/exception.rb
+ 15% [138/871]  ext/json/lib/json/add/ostruct.rb
+ 15% [139/871]  ext/json/lib/json/add/range.rb
+ 16% [140/871]  ext/json/lib/json/add/rational.rb
+ 16% [141/871]  ext/json/lib/json/add/regexp.rb
+ 16% [142/871]  ext/json/lib/json/add/struct.rb
+ 16% [143/871]  ext/json/lib/json/add/symbol.rb
+ 16% [144/871]  ext/json/lib/json/add/time.rb
+ 16% [145/871]  ext/json/lib/json/common.rb
+ 16% [146/871]  ext/json/lib/json/ext.rb
+ 16% [147/871]  ext/json/lib/json/generic_object.rb
+ 16% [148/871]  ext/json/lib/json/version.rb
+ 17% [149/871]  ext/json/parser/parser.c
+ 17% [150/871]  ext/nkf/lib/kconv.rb
+ 17% [151/871]  ext/nkf/nkf.c
+ 17% [152/871]  ext/objspace/object_tracing.c
+ 17% [153/871]  ext/objspace/objspace.c
+ 17% [154/871]  ext/objspace/objspace_dump.c
+ 17% [155/871]  ext/openssl/lib/openssl.rb
+ 17% [156/871]  ext/openssl/lib/openssl/bn.rb
+ 18% [157/871]  ext/openssl/lib/openssl/buffering.rb
+ 18% [158/871]  ext/openssl/lib/openssl/cipher.rb
+ 18% [159/871]  ext/openssl/lib/openssl/config.rb
+ 18% [160/871]  ext/openssl/lib/openssl/digest.rb
+ 18% [161/871]  ext/openssl/lib/openssl/pkcs5.rb
+ 18% [162/871]  ext/openssl/lib/openssl/pkey.rb
+ 18% [163/871]  ext/openssl/lib/openssl/ssl.rb
+ 18% [164/871]  ext/openssl/lib/openssl/x509.rb
+ 18% [165/871]  ext/openssl/ossl.c
+ 19% [166/871]  ext/openssl/ossl_asn1.c
+ 19% [167/871]  ext/openssl/ossl_bio.c
+ 19% [168/871]  ext/openssl/ossl_bn.c
+ 19% [169/871]  ext/openssl/ossl_cipher.c
+ 19% [170/871]  ext/openssl/ossl_config.c
+ 19% [171/871]  ext/openssl/ossl_digest.c
+ 19% [172/871]  ext/openssl/ossl_engine.c
+ 19% [173/871]  ext/openssl/ossl_hmac.c
+ 19% [174/871]  ext/openssl/ossl_kdf.c
+ 20% [175/871]  ext/openssl/ossl_ns_spki.c
+ 20% [176/871]  ext/openssl/ossl_ocsp.c
+ 20% [177/871]  ext/openssl/ossl_pkcs12.c
+ 20% [178/871]  ext/openssl/ossl_pkcs7.c
+ 20% [179/871]  ext/openssl/ossl_pkey.c
+ 20% [180/871]  ext/openssl/ossl_pkey_dh.c
+ 20% [181/871]  ext/openssl/ossl_pkey_dsa.c
+ 20% [182/871]  ext/openssl/ossl_pkey_ec.c
+ 21% [183/871]  ext/openssl/ossl_pkey_rsa.c
+ 21% [184/871]  ext/openssl/ossl_rand.c
+ 21% [185/871]  ext/openssl/ossl_ssl.c
+ 21% [186/871]  ext/openssl/ossl_ssl_session.c
+ 21% [187/871]  ext/openssl/ossl_x509.c
+ 21% [188/871]  ext/openssl/ossl_x509attr.c
+ 21% [189/871]  ext/openssl/ossl_x509cert.c
+ 21% [190/871]  ext/openssl/ossl_x509crl.c
+ 21% [191/871]  ext/openssl/ossl_x509ext.c
+ 22% [192/871]  ext/openssl/ossl_x509name.c
+ 22% [193/871]  ext/openssl/ossl_x509req.c
+ 22% [194/871]  ext/openssl/ossl_x509revoked.c
+ 22% [195/871]  ext/openssl/ossl_x509store.c
+ 22% [196/871]  ext/pathname/lib/pathname.rb
+ 22% [197/871]  ext/pathname/pathname.c
+ 22% [198/871]  ext/psych/lib/psych.rb
+ 22% [199/871]  ext/psych/lib/psych/class_loader.rb
+ 22% [200/871]  ext/psych/lib/psych/coder.rb
+ 23% [201/871]  ext/psych/lib/psych/core_ext.rb
+ 23% [202/871]  ext/psych/lib/psych/exception.rb
+ 23% [203/871]  ext/psych/lib/psych/handler.rb
+ 23% [204/871]  ext/psych/lib/psych/handlers/document_stream.rb
+ 23% [205/871]  ext/psych/lib/psych/handlers/recorder.rb
+ 23% [206/871]  ext/psych/lib/psych/json/ruby_events.rb
+ 23% [207/871]  ext/psych/lib/psych/json/stream.rb
+ 23% [208/871]  ext/psych/lib/psych/json/tree_builder.rb
+ 23% [209/871]  ext/psych/lib/psych/json/yaml_events.rb
+ 24% [210/871]  ext/psych/lib/psych/nodes.rb
+ 24% [211/871]  ext/psych/lib/psych/nodes/alias.rb
+ 24% [212/871]  ext/psych/lib/psych/nodes/document.rb
+ 24% [213/871]  ext/psych/lib/psych/nodes/mapping.rb
+ 24% [214/871]  ext/psych/lib/psych/nodes/node.rb
+ 24% [215/871]  ext/psych/lib/psych/nodes/scalar.rb
+ 24% [216/871]  ext/psych/lib/psych/nodes/sequence.rb
+ 24% [217/871]  ext/psych/lib/psych/nodes/stream.rb
+ 25% [218/871]  ext/psych/lib/psych/omap.rb
+ 25% [219/871]  ext/psych/lib/psych/parser.rb
+ 25% [220/871]  ext/psych/lib/psych/scalar_scanner.rb
+ 25% [221/871]  ext/psych/lib/psych/set.rb
+ 25% [222/871]  ext/psych/lib/psych/stream.rb
+ 25% [223/871]  ext/psych/lib/psych/streaming.rb
+ 25% [224/871]  ext/psych/lib/psych/syntax_error.rb
+ 25% [225/871]  ext/psych/lib/psych/tree_builder.rb
+ 25% [226/871]  ext/psych/lib/psych/versions.rb
+ 26% [227/871]  ext/psych/lib/psych/visitors.rb
+ 26% [228/871]  ext/psych/lib/psych/visitors/depth_first.rb
+ 26% [229/871]  ext/psych/lib/psych/visitors/emitter.rb
+ 26% [230/871]  ext/psych/lib/psych/visitors/json_tree.rb
+ 26% [231/871]  ext/psych/lib/psych/visitors/to_ruby.rb
+ 26% [232/871]  ext/psych/lib/psych/visitors/visitor.rb
+ 26% [233/871]  ext/psych/lib/psych/visitors/yaml_tree.rb
+ 26% [234/871]  ext/psych/lib/psych/y.rb
+ 26% [235/871]  ext/psych/psych.c
+ 27% [236/871]  ext/psych/psych_emitter.c
+ 27% [237/871]  ext/psych/psych_parser.c
+ 27% [238/871]  ext/psych/psych_to_ruby.c
+ 27% [239/871]  ext/psych/psych_yaml_tree.c
+ 27% [240/871]  ext/pty/lib/expect.rb
+ 27% [241/871]  ext/pty/pty.c
+ 27% [242/871]  ext/racc/cparse/cparse.c
+ 27% [243/871]  ext/readline/readline.c
+ 28% [244/871]  ext/ripper/lib/ripper.rb
+ 28% [245/871]  ext/ripper/lib/ripper/core.rb
+ 28% [246/871]  ext/ripper/lib/ripper/filter.rb
+ 28% [247/871]  ext/ripper/lib/ripper/lexer.rb
+ 28% [248/871]  ext/ripper/lib/ripper/sexp.rb
+ 28% [249/871]  ext/sdbm/init.c
+ 28% [250/871]  ext/socket/ancdata.c
+ 28% [251/871]  ext/socket/basicsocket.c
+ 28% [252/871]  ext/socket/constants.c
+ 29% [253/871]  ext/socket/constdefs.c
+ 29% [254/871]  ext/socket/ifaddr.c
+ 29% [255/871]  ext/socket/init.c
+ 29% [256/871]  ext/socket/ipsocket.c
+ 29% [257/871]  ext/socket/lib/socket.rb
+ 29% [258/871]  ext/socket/option.c
+ 29% [259/871]  ext/socket/raddrinfo.c
+ 29% [260/871]  ext/socket/socket.c
+ 29% [261/871]  ext/socket/sockssocket.c
+ 30% [262/871]  ext/socket/tcpserver.c
+ 30% [263/871]  ext/socket/tcpsocket.c
+ 30% [264/871]  ext/socket/udpsocket.c
+ 30% [265/871]  ext/socket/unixserver.c
+ 30% [266/871]  ext/socket/unixsocket.c
+ 30% [267/871]  ext/stringio/stringio.c
+ 30% [268/871]  ext/strscan/strscan.c
+ 30% [269/871]  ext/syslog/lib/syslog/logger.rb
+ 30% [270/871]  ext/syslog/syslog.c
+ 31% [271/871]  ext/win32ole/lib/win32ole.rb
+ 31% [272/871]  ext/win32ole/lib/win32ole/property.rb
+ 31% [273/871]  ext/win32ole/win32ole.c
+ 31% [274/871]  ext/win32ole/win32ole_error.c
+ 31% [275/871]  ext/win32ole/win32ole_event.c
+ 31% [276/871]  ext/win32ole/win32ole_method.c
+ 31% [277/871]  ext/win32ole/win32ole_param.c
+ 31% [278/871]  ext/win32ole/win32ole_record.c
+ 32% [279/871]  ext/win32ole/win32ole_type.c
+ 32% [280/871]  ext/win32ole/win32ole_typelib.c
+ 32% [281/871]  ext/win32ole/win32ole_variable.c
+ 32% [282/871]  ext/win32ole/win32ole_variant.c
+ 32% [283/871]  ext/win32ole/win32ole_variant_m.c
+ 32% [284/871]  ext/zlib/zlib.c
+ 32% [285/871]  file.c
+ 32% [286/871]  gc.c
+ 32% [287/871]  golf_prelude.c
+ 33% [288/871]  goruby.c
+ 33% [289/871]  hash.c
+ 33% [290/871]  id.c
+ 33% [291/871]  id_table.c
+ 33% [292/871]  inits.c
+ 33% [293/871]  io.c
+ 33% [294/871]  iseq.c
+ 33% [295/871]  lex.c
+ 33% [296/871]  lib/English.rb
+ 34% [297/871]  lib/abbrev.rb
+ 34% [298/871]  lib/base64.rb
+ 34% [299/871]  lib/benchmark.rb
+ 34% [300/871]  lib/cgi.rb
+ 34% [301/871]  lib/cgi/cookie.rb
+ 34% [302/871]  lib/cgi/core.rb
+ 34% [303/871]  lib/cgi/html.rb
+ 34% [304/871]  lib/cgi/session.rb
+ 35% [305/871]  lib/cgi/session/pstore.rb
+ 35% [306/871]  lib/cgi/util.rb
+ 35% [307/871]  lib/cmath.rb
+ 35% [308/871]  lib/csv.rb
+ 35% [309/871]  lib/debug.rb
+ 35% [310/871]  lib/delegate.rb
+ 35% [311/871]  lib/drb.rb
+ 35% [312/871]  lib/drb/acl.rb
+ 35% [313/871]  lib/drb/drb.rb
+ 36% [314/871]  lib/drb/eq.rb
+ 36% [315/871]  lib/drb/extserv.rb
+ 36% [316/871]  lib/drb/extservm.rb
+ 36% [317/871]  lib/drb/gw.rb
+ 36% [318/871]  lib/drb/invokemethod.rb
+ 36% [319/871]  lib/drb/observer.rb
+ 36% [320/871]  lib/drb/ssl.rb
+ 36% [321/871]  lib/drb/timeridconv.rb
+ 36% [322/871]  lib/drb/unix.rb
+ 37% [323/871]  lib/e2mmap.rb
+ 37% [324/871]  lib/erb.rb
+ 37% [325/871]  lib/fileutils.rb
+ 37% [326/871]  lib/find.rb
+ 37% [327/871]  lib/forwardable.rb
+ 37% [328/871]  lib/forwardable/impl.rb
+ 37% [329/871]  lib/getoptlong.rb
+ 37% [330/871]  lib/ipaddr.rb
+ 38% [331/871]  lib/irb.rb
+ 38% [332/871]  lib/irb/cmd/chws.rb
+ 38% [333/871]  lib/irb/cmd/fork.rb
+ 38% [334/871]  lib/irb/cmd/help.rb
+ 38% [335/871]  lib/irb/cmd/load.rb
+ 38% [336/871]  lib/irb/cmd/nop.rb
+ 38% [337/871]  lib/irb/cmd/pushws.rb
+ 38% [338/871]  lib/irb/cmd/subirb.rb
+ 38% [339/871]  lib/irb/completion.rb
+ 39% [340/871]  lib/irb/context.rb
+ 39% [341/871]  lib/irb/ext/change-ws.rb
+ 39% [342/871]  lib/irb/ext/history.rb
+ 39% [343/871]  lib/irb/ext/loader.rb
+ 39% [344/871]  lib/irb/ext/multi-irb.rb
+ 39% [345/871]  lib/irb/ext/save-history.rb
+ 39% [346/871]  lib/irb/ext/tracer.rb
+ 39% [347/871]  lib/irb/ext/use-loader.rb
+ 39% [348/871]  lib/irb/ext/workspaces.rb
+ 40% [349/871]  lib/irb/extend-command.rb
+ 40% [350/871]  lib/irb/frame.rb
+ 40% [351/871]  lib/irb/help.rb
+ 40% [352/871]  lib/irb/init.rb
+ 40% [353/871]  lib/irb/input-method.rb
+ 40% [354/871]  lib/irb/inspector.rb
+ 40% [355/871]  lib/irb/lc/error.rb
+ 40% [356/871]  lib/irb/lc/ja/encoding_aliases.rb
+ 40% [357/871]  lib/irb/lc/ja/error.rb
+ 41% [358/871]  lib/irb/locale.rb
+ 41% [359/871]  lib/irb/magic-file.rb
+ 41% [360/871]  lib/irb/notifier.rb
+ 41% [361/871]  lib/irb/output-method.rb
+ 41% [362/871]  lib/irb/ruby-lex.rb
+ 41% [363/871]  lib/irb/ruby-token.rb
+ 41% [364/871]  lib/irb/slex.rb
+ 41% [365/871]  lib/irb/src_encoding.rb
+ 42% [366/871]  lib/irb/version.rb
+ 42% [367/871]  lib/irb/workspace.rb
+ 42% [368/871]  lib/irb/ws-for-case-2.rb
+ 42% [369/871]  lib/irb/xmp.rb
+ 42% [370/871]  lib/logger.rb
+ 42% [371/871]  lib/matrix.rb
+ 42% [372/871]  lib/matrix/eigenvalue_decomposition.rb
+ 42% [373/871]  lib/matrix/lup_decomposition.rb
+ 42% [374/871]  lib/mkmf.rb
+ 43% [375/871]  lib/monitor.rb
+ 43% [376/871]  lib/mutex_m.rb
+ 43% [377/871]  lib/net/ftp.rb
+ 43% [378/871]  lib/net/http.rb
+ 43% [379/871]  lib/net/http/backward.rb
+ 43% [380/871]  lib/net/http/exceptions.rb
+ 43% [381/871]  lib/net/http/generic_request.rb
+ 43% [382/871]  lib/net/http/header.rb
+ 43% [383/871]  lib/net/http/proxy_delta.rb
+ 44% [384/871]  lib/net/http/request.rb
+ 44% [385/871]  lib/net/http/requests.rb
+ 44% [386/871]  lib/net/http/response.rb
+ 44% [387/871]  lib/net/http/responses.rb
+ 44% [388/871]  lib/net/http/status.rb
+ 44% [389/871]  lib/net/https.rb
+ 44% [390/871]  lib/net/imap.rb
+ 44% [391/871]  lib/net/pop.rb
+ 45% [392/871]  lib/net/protocol.rb
+ 45% [393/871]  lib/net/smtp.rb
+ 45% [394/871]  lib/observer.rb
+ 45% [395/871]  lib/open-uri.rb
+ 45% [396/871]  lib/open3.rb
+ 45% [397/871]  lib/optionparser.rb
+ 45% [398/871]  lib/optparse.rb
+ 45% [399/871]  lib/optparse/ac.rb
+ 45% [400/871]  lib/optparse/date.rb
+ 46% [401/871]  lib/optparse/kwargs.rb
+ 46% [402/871]  lib/optparse/shellwords.rb
+ 46% [403/871]  lib/optparse/time.rb
+ 46% [404/871]  lib/optparse/uri.rb
+ 46% [405/871]  lib/optparse/version.rb
+ 46% [406/871]  lib/ostruct.rb
+ 46% [407/871]  lib/pp.rb
+ 46% [408/871]  lib/prettyprint.rb
+ 46% [409/871]  lib/prime.rb
+ 47% [410/871]  lib/profile.rb
+ 47% [411/871]  lib/profiler.rb
+ 47% [412/871]  lib/pstore.rb
+ 47% [413/871]  lib/racc/parser.rb
+ 47% [414/871]  lib/racc/rdoc/grammar.en.rdoc
+ 47% [415/871]  lib/rdoc.rb
+ 47% [416/871]  lib/rdoc/alias.rb
+ 47% [417/871]  lib/rdoc/anon_class.rb
+ 47% [418/871]  lib/rdoc/any_method.rb
+ 48% [419/871]  lib/rdoc/attr.rb
+ 48% [420/871]  lib/rdoc/class_module.rb
+ 48% [421/871]  lib/rdoc/code_object.rb
+ 48% [422/871]  lib/rdoc/code_objects.rb
+ 48% [423/871]  lib/rdoc/comment.rb
+ 48% [424/871]  lib/rdoc/constant.rb
+ 48% [425/871]  lib/rdoc/context.rb
+ 48% [426/871]  lib/rdoc/cross_reference.rb
+ 49% [427/871]  lib/rdoc/encoding.rb
+ 49% [428/871]  lib/rdoc/erb_partial.rb
+ 49% [429/871]  lib/rdoc/erbio.rb
+ 49% [430/871]  lib/rdoc/extend.rb
+ 49% [431/871]  lib/rdoc/generator.rb
+ 49% [432/871]  lib/rdoc/ghost_method.rb
+ 49% [433/871]  lib/rdoc/i18n.rb
+ 49% [434/871]  lib/rdoc/include.rb
+ 49% [435/871]  lib/rdoc/known_classes.rb
+ 50% [436/871]  lib/rdoc/markdown.rb
+ 50% [437/871]  lib/rdoc/markup.rb
+ 50% [438/871]  lib/rdoc/meta_method.rb
+ 50% [439/871]  lib/rdoc/method_attr.rb
+ 50% [440/871]  lib/rdoc/mixin.rb
+ 50% [441/871]  lib/rdoc/normal_class.rb
+ 50% [442/871]  lib/rdoc/normal_module.rb
+ 50% [443/871]  lib/rdoc/options.rb
+ 50% [444/871]  lib/rdoc/parser.rb
+ 51% [445/871]  lib/rdoc/rd.rb
+ 51% [446/871]  lib/rdoc/rdoc.rb
+ 51% [447/871]  lib/rdoc/require.rb
+ 51% [448/871]  lib/rdoc/ri.rb
+ 51% [449/871]  lib/rdoc/rubygems_hook.rb
+ 51% [450/871]  lib/rdoc/servlet.rb
+ 51% [451/871]  lib/rdoc/single_class.rb
+ 51% [452/871]  lib/rdoc/stats.rb
+ 52% [453/871]  lib/rdoc/store.rb
+ 52% [454/871]  lib/rdoc/task.rb
+ 52% [455/871]  lib/rdoc/test_case.rb
+ 52% [456/871]  lib/rdoc/text.rb
+ 52% [457/871]  lib/rdoc/token_stream.rb
+ 52% [458/871]  lib/rdoc/tom_doc.rb
+ 52% [459/871]  lib/rdoc/top_level.rb
+ 52% [460/871]  lib/resolv-replace.rb
+ 52% [461/871]  lib/resolv.rb
+ 53% [462/871]  lib/rexml/attlistdecl.rb
+ 53% [463/871]  lib/rexml/attribute.rb
+ 53% [464/871]  lib/rexml/cdata.rb
+ 53% [465/871]  lib/rexml/child.rb
+ 53% [466/871]  lib/rexml/comment.rb
+ 53% [467/871]  lib/rexml/doctype.rb
+ 53% [468/871]  lib/rexml/document.rb
+ 53% [469/871]  lib/rexml/dtd/attlistdecl.rb
+ 53% [470/871]  lib/rexml/dtd/dtd.rb
+ 54% [471/871]  lib/rexml/dtd/elementdecl.rb
+ 54% [472/871]  lib/rexml/dtd/entitydecl.rb
+ 54% [473/871]  lib/rexml/dtd/notationdecl.rb
+ 54% [474/871]  lib/rexml/element.rb
+ 54% [475/871]  lib/rexml/encoding.rb
+ 54% [476/871]  lib/rexml/entity.rb
+ 54% [477/871]  lib/rexml/formatters/default.rb
+ 54% [478/871]  lib/rexml/formatters/pretty.rb
+ 54% [479/871]  lib/rexml/formatters/transitive.rb
+ 55% [480/871]  lib/rexml/functions.rb
+ 55% [481/871]  lib/rexml/instruction.rb
+ 55% [482/871]  lib/rexml/light/node.rb
+ 55% [483/871]  lib/rexml/namespace.rb
+ 55% [484/871]  lib/rexml/node.rb
+ 55% [485/871]  lib/rexml/output.rb
+ 55% [486/871]  lib/rexml/parent.rb
+ 55% [487/871]  lib/rexml/parseexception.rb
+ 56% [488/871]  lib/rexml/parsers/baseparser.rb
+ 56% [489/871]  lib/rexml/parsers/lightparser.rb
+ 56% [490/871]  lib/rexml/parsers/pullparser.rb
+ 56% [491/871]  lib/rexml/parsers/sax2parser.rb
+ 56% [492/871]  lib/rexml/parsers/streamparser.rb
+ 56% [493/871]  lib/rexml/parsers/treeparser.rb
+ 56% [494/871]  lib/rexml/parsers/ultralightparser.rb
+ 56% [495/871]  lib/rexml/parsers/xpathparser.rb
+ 56% [496/871]  lib/rexml/quickpath.rb
+ 57% [497/871]  lib/rexml/rexml.rb
+ 57% [498/871]  lib/rexml/sax2listener.rb
+ 57% [499/871]  lib/rexml/security.rb
+ 57% [500/871]  lib/rexml/source.rb
+ 57% [501/871]  lib/rexml/streamlistener.rb
+ 57% [502/871]  lib/rexml/syncenumerator.rb
+ 57% [503/871]  lib/rexml/text.rb
+ 57% [504/871]  lib/rexml/undefinednamespaceexception.rb
+ 57% [505/871]  lib/rexml/validation/relaxng.rb
+ 58% [506/871]  lib/rexml/validation/validation.rb
+ 58% [507/871]  lib/rexml/validation/validationexception.rb
+ 58% [508/871]  lib/rexml/xmldecl.rb
+ 58% [509/871]  lib/rexml/xmltokens.rb
+ 58% [510/871]  lib/rexml/xpath.rb
+ 58% [511/871]  lib/rexml/xpath_parser.rb
+ 58% [512/871]  lib/rinda/rinda.rb
+ 58% [513/871]  lib/rinda/ring.rb
+ 59% [514/871]  lib/rinda/tuplespace.rb
+ 59% [515/871]  lib/rss.rb
+ 59% [516/871]  lib/rss/0.9.rb
+ 59% [517/871]  lib/rss/1.0.rb
+ 59% [518/871]  lib/rss/2.0.rb
+ 59% [519/871]  lib/rss/atom.rb
+ 59% [520/871]  lib/rss/content.rb
+ 59% [521/871]  lib/rss/content/1.0.rb
+ 59% [522/871]  lib/rss/content/2.0.rb
+ 60% [523/871]  lib/rss/converter.rb
+ 60% [524/871]  lib/rss/dublincore.rb
+ 60% [525/871]  lib/rss/dublincore/1.0.rb
+ 60% [526/871]  lib/rss/dublincore/2.0.rb
+ 60% [527/871]  lib/rss/dublincore/atom.rb
+ 60% [528/871]  lib/rss/image.rb
+ 60% [529/871]  lib/rss/itunes.rb
+ 60% [530/871]  lib/rss/maker.rb
+ 60% [531/871]  lib/rss/maker/0.9.rb
+ 61% [532/871]  lib/rss/maker/1.0.rb
+ 61% [533/871]  lib/rss/maker/2.0.rb
+ 61% [534/871]  lib/rss/maker/atom.rb
+ 61% [535/871]  lib/rss/maker/base.rb
+ 61% [536/871]  lib/rss/maker/content.rb
+ 61% [537/871]  lib/rss/maker/dublincore.rb
+ 61% [538/871]  lib/rss/maker/entry.rb
+ 61% [539/871]  lib/rss/maker/feed.rb
+ 61% [540/871]  lib/rss/maker/image.rb
+ 62% [541/871]  lib/rss/maker/itunes.rb
+ 62% [542/871]  lib/rss/maker/slash.rb
+ 62% [543/871]  lib/rss/maker/syndication.rb
+ 62% [544/871]  lib/rss/maker/taxonomy.rb
+ 62% [545/871]  lib/rss/maker/trackback.rb
+ 62% [546/871]  lib/rss/parser.rb
+ 62% [547/871]  lib/rss/rexmlparser.rb
+ 62% [548/871]  lib/rss/rss.rb
+ 63% [549/871]  lib/rss/slash.rb
+ 63% [550/871]  lib/rss/syndication.rb
+ 63% [551/871]  lib/rss/taxonomy.rb
+ 63% [552/871]  lib/rss/trackback.rb
+ 63% [553/871]  lib/rss/utils.rb
+ 63% [554/871]  lib/rss/xml-stylesheet.rb
+ 63% [555/871]  lib/rss/xml.rb
+ 63% [556/871]  lib/rss/xmlparser.rb
+ 63% [557/871]  lib/rss/xmlscanner.rb
+ 64% [558/871]  lib/rubygems.rb
+ 64% [559/871]  lib/rubygems/available_set.rb
+ 64% [560/871]  lib/rubygems/basic_specification.rb
+ 64% [561/871]  lib/rubygems/bundler_version_finder.rb
+ 64% [562/871]  lib/rubygems/command.rb
+ 64% [563/871]  lib/rubygems/command_manager.rb
+ 64% [564/871]  lib/rubygems/commands/build_command.rb
+ 64% [565/871]  lib/rubygems/commands/cert_command.rb
+ 64% [566/871]  lib/rubygems/commands/check_command.rb
+ 65% [567/871]  lib/rubygems/commands/cleanup_command.rb
+ 65% [568/871]  lib/rubygems/commands/contents_command.rb
+ 65% [569/871]  lib/rubygems/commands/dependency_command.rb
+ 65% [570/871]  lib/rubygems/commands/environment_command.rb
+ 65% [571/871]  lib/rubygems/commands/fetch_command.rb
+ 65% [572/871]  lib/rubygems/commands/generate_index_command.rb
+ 65% [573/871]  lib/rubygems/commands/help_command.rb
+ 65% [574/871]  lib/rubygems/commands/install_command.rb
+ 66% [575/871]  lib/rubygems/commands/list_command.rb
+ 66% [576/871]  lib/rubygems/commands/lock_command.rb
+ 66% [577/871]  lib/rubygems/commands/mirror_command.rb
+ 66% [578/871]  lib/rubygems/commands/open_command.rb
+ 66% [579/871]  lib/rubygems/commands/outdated_command.rb
+ 66% [580/871]  lib/rubygems/commands/owner_command.rb
+ 66% [581/871]  lib/rubygems/commands/pristine_command.rb
+ 66% [582/871]  lib/rubygems/commands/push_command.rb
+ 66% [583/871]  lib/rubygems/commands/query_command.rb
+ 67% [584/871]  lib/rubygems/commands/rdoc_command.rb
+ 67% [585/871]  lib/rubygems/commands/search_command.rb
+ 67% [586/871]  lib/rubygems/commands/server_command.rb
+ 67% [587/871]  lib/rubygems/commands/setup_command.rb
+ 67% [588/871]  lib/rubygems/commands/signin_command.rb
+ 67% [589/871]  lib/rubygems/commands/signout_command.rb
+ 67% [590/871]  lib/rubygems/commands/sources_command.rb
+ 67% [591/871]  lib/rubygems/commands/specification_command.rb
+ 67% [592/871]  lib/rubygems/commands/stale_command.rb
+ 68% [593/871]  lib/rubygems/commands/uninstall_command.rb
+ 68% [594/871]  lib/rubygems/commands/unpack_command.rb
+ 68% [595/871]  lib/rubygems/commands/update_command.rb
+ 68% [596/871]  lib/rubygems/commands/which_command.rb
+ 68% [597/871]  lib/rubygems/commands/yank_command.rb
+ 68% [598/871]  lib/rubygems/compatibility.rb
+ 68% [599/871]  lib/rubygems/config_file.rb
+ 68% [600/871]  lib/rubygems/core_ext/kernel_gem.rb
+ 69% [601/871]  lib/rubygems/core_ext/kernel_require.rb
+ 69% [602/871]  lib/rubygems/defaults.rb
+ 69% [603/871]  lib/rubygems/dependency.rb
+ 69% [604/871]  lib/rubygems/dependency_installer.rb
+ 69% [605/871]  lib/rubygems/dependency_list.rb
+ 69% [606/871]  lib/rubygems/deprecate.rb
+ 69% [607/871]  lib/rubygems/doctor.rb
+ 69% [608/871]  lib/rubygems/errors.rb
+ 69% [609/871]  lib/rubygems/exceptions.rb
+ 70% [610/871]  lib/rubygems/ext.rb
+ 70% [611/871]  lib/rubygems/ext/build_error.rb
+ 70% [612/871]  lib/rubygems/ext/builder.rb
+ 70% [613/871]  lib/rubygems/ext/cmake_builder.rb
+ 70% [614/871]  lib/rubygems/ext/configure_builder.rb
+ 70% [615/871]  lib/rubygems/ext/ext_conf_builder.rb
+ 70% [616/871]  lib/rubygems/ext/rake_builder.rb
+ 70% [617/871]  lib/rubygems/gem_runner.rb
+ 70% [618/871]  lib/rubygems/gemcutter_utilities.rb
+ 71% [619/871]  lib/rubygems/indexer.rb
+ 71% [620/871]  lib/rubygems/install_default_message.rb
+ 71% [621/871]  lib/rubygems/install_message.rb
+ 71% [622/871]  lib/rubygems/install_update_options.rb
+ 71% [623/871]  lib/rubygems/installer.rb
+ 71% [624/871]  lib/rubygems/installer_test_case.rb
+ 71% [625/871]  lib/rubygems/local_remote_options.rb
+ 71% [626/871]  lib/rubygems/mock_gem_ui.rb
+ 71% [627/871]  lib/rubygems/name_tuple.rb
+ 72% [628/871]  lib/rubygems/package.rb
+ 72% [629/871]  lib/rubygems/package/digest_io.rb
+ 72% [630/871]  lib/rubygems/package/file_source.rb
+ 72% [631/871]  lib/rubygems/package/io_source.rb
+ 72% [632/871]  lib/rubygems/package/old.rb
+ 72% [633/871]  lib/rubygems/package/source.rb
+ 72% [634/871]  lib/rubygems/package/tar_header.rb
+ 72% [635/871]  lib/rubygems/package/tar_reader.rb
+ 73% [636/871]  lib/rubygems/package/tar_reader/entry.rb
+ 73% [637/871]  lib/rubygems/package/tar_test_case.rb
+ 73% [638/871]  lib/rubygems/package/tar_writer.rb
+ 73% [639/871]  lib/rubygems/package_task.rb
+ 73% [640/871]  lib/rubygems/path_support.rb
+ 73% [641/871]  lib/rubygems/platform.rb
+ 73% [642/871]  lib/rubygems/psych_additions.rb
+ 73% [643/871]  lib/rubygems/psych_tree.rb
+ 73% [644/871]  lib/rubygems/rdoc.rb
+ 74% [645/871]  lib/rubygems/remote_fetcher.rb
+ 74% [646/871]  lib/rubygems/request.rb
+ 74% [647/871]  lib/rubygems/request/connection_pools.rb
+ 74% [648/871]  lib/rubygems/request/http_pool.rb
+ 74% [649/871]  lib/rubygems/request/https_pool.rb
+ 74% [650/871]  lib/rubygems/request_set.rb
+ 74% [651/871]  lib/rubygems/request_set/gem_dependency_api.rb
+ 74% [652/871]  lib/rubygems/request_set/lockfile.rb
+ 74% [653/871]  lib/rubygems/request_set/lockfile/parser.rb
+ 75% [654/871]  lib/rubygems/request_set/lockfile/tokenizer.rb
+ 75% [655/871]  lib/rubygems/requirement.rb
+ 75% [656/871]  lib/rubygems/resolver.rb
+ 75% [657/871]  lib/rubygems/resolver/activation_request.rb
+ 75% [658/871]  lib/rubygems/resolver/api_set.rb
+ 75% [659/871]  lib/rubygems/resolver/api_specification.rb
+ 75% [660/871]  lib/rubygems/resolver/best_set.rb
+ 75% [661/871]  lib/rubygems/resolver/composed_set.rb
+ 76% [662/871]  lib/rubygems/resolver/conflict.rb
+ 76% [663/871]  lib/rubygems/resolver/current_set.rb
+ 76% [664/871]  lib/rubygems/resolver/dependency_request.rb
+ 76% [665/871]  lib/rubygems/resolver/git_set.rb
+ 76% [666/871]  lib/rubygems/resolver/git_specification.rb
+ 76% [667/871]  lib/rubygems/resolver/index_set.rb
+ 76% [668/871]  lib/rubygems/resolver/index_specification.rb
+ 76% [669/871]  lib/rubygems/resolver/installed_specification.rb
+ 76% [670/871]  lib/rubygems/resolver/installer_set.rb
+ 77% [671/871]  lib/rubygems/resolver/local_specification.rb
+ 77% [672/871]  lib/rubygems/resolver/lock_set.rb
+ 77% [673/871]  lib/rubygems/resolver/lock_specification.rb
+ 77% [674/871]  lib/rubygems/resolver/molinillo.rb
+ 77% [675/871]  lib/rubygems/resolver/molinillo/lib/molinillo.rb
+ 77% [676/871]  lib/rubygems/resolver/molinillo/lib/molinillo/delegates/resolution_state.rb
+ 77% [677/871]  lib/rubygems/resolver/molinillo/lib/molinillo/delegates/specification_provider.rb
+ 77% [678/871]  lib/rubygems/resolver/molinillo/lib/molinillo/dependency_graph.rb
+ 77% [679/871]  lib/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/action.rb
+ 78% [680/871]  lib/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/add_edge_no_circular.rb
+ 78% [681/871]  lib/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/add_vertex.rb
+ 78% [682/871]  lib/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/delete_edge.rb
+ 78% [683/871]  lib/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/detach_vertex_named.rb
+ 78% [684/871]  lib/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/log.rb
+ 78% [685/871]  lib/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/set_payload.rb
+ 78% [686/871]  lib/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/tag.rb
+ 78% [687/871]  lib/rubygems/resolver/molinillo/lib/molinillo/dependency_graph/vertex.rb
+ 78% [688/871]  lib/rubygems/resolver/molinillo/lib/molinillo/errors.rb
+ 79% [689/871]  lib/rubygems/resolver/molinillo/lib/molinillo/gem_metadata.rb
+ 79% [690/871]  lib/rubygems/resolver/molinillo/lib/molinillo/modules/specification_provider.rb
+ 79% [691/871]  lib/rubygems/resolver/molinillo/lib/molinillo/modules/ui.rb
+ 79% [692/871]  lib/rubygems/resolver/molinillo/lib/molinillo/resolution.rb
+ 79% [693/871]  lib/rubygems/resolver/molinillo/lib/molinillo/resolver.rb
+ 79% [694/871]  lib/rubygems/resolver/molinillo/lib/molinillo/state.rb
+ 79% [695/871]  lib/rubygems/resolver/requirement_list.rb
+ 79% [696/871]  lib/rubygems/resolver/set.rb
+ 80% [697/871]  lib/rubygems/resolver/source_set.rb
+ 80% [698/871]  lib/rubygems/resolver/spec_specification.rb
+ 80% [699/871]  lib/rubygems/resolver/specification.rb
+ 80% [700/871]  lib/rubygems/resolver/stats.rb
+ 80% [701/871]  lib/rubygems/resolver/vendor_set.rb
+ 80% [702/871]  lib/rubygems/resolver/vendor_specification.rb
+ 80% [703/871]  lib/rubygems/safe_yaml.rb
+ 80% [704/871]  lib/rubygems/security.rb
+ 80% [705/871]  lib/rubygems/security/policies.rb
+ 81% [706/871]  lib/rubygems/security/policy.rb
+ 81% [707/871]  lib/rubygems/security/signer.rb
+ 81% [708/871]  lib/rubygems/security/trust_dir.rb
+ 81% [709/871]  lib/rubygems/security_option.rb
+ 81% [710/871]  lib/rubygems/server.rb
+ 81% [711/871]  lib/rubygems/source.rb
+ 81% [712/871]  lib/rubygems/source/git.rb
+ 81% [713/871]  lib/rubygems/source/installed.rb
+ 81% [714/871]  lib/rubygems/source/local.rb
+ 82% [715/871]  lib/rubygems/source/lock.rb
+ 82% [716/871]  lib/rubygems/source/specific_file.rb
+ 82% [717/871]  lib/rubygems/source/vendor.rb
+ 82% [718/871]  lib/rubygems/source_list.rb
+ 82% [719/871]  lib/rubygems/source_local.rb
+ 82% [720/871]  lib/rubygems/source_specific_file.rb
+ 82% [721/871]  lib/rubygems/spec_fetcher.rb
+ 82% [722/871]  lib/rubygems/specification.rb
+ 83% [723/871]  lib/rubygems/stub_specification.rb
+ 83% [724/871]  lib/rubygems/syck_hack.rb
+ 83% [725/871]  lib/rubygems/test_case.rb
+ 83% [726/871]  lib/rubygems/test_utilities.rb
+ 83% [727/871]  lib/rubygems/text.rb
+ 83% [728/871]  lib/rubygems/uninstaller.rb
+ 83% [729/871]  lib/rubygems/uri_formatter.rb
+ 83% [730/871]  lib/rubygems/user_interaction.rb
+ 83% [731/871]  lib/rubygems/util.rb
+ 84% [732/871]  lib/rubygems/util/licenses.rb
+ 84% [733/871]  lib/rubygems/util/list.rb
+ 84% [734/871]  lib/rubygems/validator.rb
+ 84% [735/871]  lib/rubygems/version.rb
+ 84% [736/871]  lib/rubygems/version_option.rb
+ 84% [737/871]  lib/scanf.rb
+ 84% [738/871]  lib/securerandom.rb
+ 84% [739/871]  lib/set.rb
+ 84% [740/871]  lib/shell.rb
+ 85% [741/871]  lib/shell/builtin-command.rb
+ 85% [742/871]  lib/shell/command-processor.rb
+ 85% [743/871]  lib/shell/error.rb
+ 85% [744/871]  lib/shell/filter.rb
+ 85% [745/871]  lib/shell/process-controller.rb
+ 85% [746/871]  lib/shell/system-command.rb
+ 85% [747/871]  lib/shell/version.rb
+ 85% [748/871]  lib/shellwords.rb
+ 85% [749/871]  lib/singleton.rb
+ 86% [750/871]  lib/sync.rb
+ 86% [751/871]  lib/tempfile.rb
+ 86% [752/871]  lib/thwait.rb
+ 86% [753/871]  lib/time.rb
+ 86% [754/871]  lib/timeout.rb
+ 86% [755/871]  lib/tmpdir.rb
+ 86% [756/871]  lib/tracer.rb
+ 86% [757/871]  lib/tsort.rb
+ 87% [758/871]  lib/un.rb
+ 87% [759/871]  lib/unicode_normalize/normalize.rb
+ 87% [760/871]  lib/unicode_normalize/tables.rb
+ 87% [761/871]  lib/uri.rb
+ 87% [762/871]  lib/uri/common.rb
+ 87% [763/871]  lib/uri/ftp.rb
+ 87% [764/871]  lib/uri/generic.rb
+ 87% [765/871]  lib/uri/http.rb
+ 87% [766/871]  lib/uri/https.rb
+ 88% [767/871]  lib/uri/ldap.rb
+ 88% [768/871]  lib/uri/ldaps.rb
+ 88% [769/871]  lib/uri/mailto.rb
+ 88% [770/871]  lib/uri/rfc2396_parser.rb
+ 88% [771/871]  lib/uri/rfc3986_parser.rb
+ 88% [772/871]  lib/weakref.rb
+ 88% [773/871]  lib/webrick.rb
+ 88% [774/871]  lib/webrick/accesslog.rb
+ 88% [775/871]  lib/webrick/cgi.rb
+ 89% [776/871]  lib/webrick/compat.rb
+ 89% [777/871]  lib/webrick/config.rb
+ 89% [778/871]  lib/webrick/cookie.rb
+ 89% [779/871]  lib/webrick/htmlutils.rb
+ 89% [780/871]  lib/webrick/httpauth.rb
+ 89% [781/871]  lib/webrick/httpauth/authenticator.rb
+ 89% [782/871]  lib/webrick/httpauth/basicauth.rb
+ 89% [783/871]  lib/webrick/httpauth/digestauth.rb
+ 90% [784/871]  lib/webrick/httpauth/htdigest.rb
+ 90% [785/871]  lib/webrick/httpauth/htgroup.rb
+ 90% [786/871]  lib/webrick/httpauth/htpasswd.rb
+ 90% [787/871]  lib/webrick/httpauth/userdb.rb
+ 90% [788/871]  lib/webrick/httpproxy.rb
+ 90% [789/871]  lib/webrick/httprequest.rb
+ 90% [790/871]  lib/webrick/httpresponse.rb
+ 90% [791/871]  lib/webrick/https.rb
+ 90% [792/871]  lib/webrick/httpserver.rb
+ 91% [793/871]  lib/webrick/httpservlet.rb
+ 91% [794/871]  lib/webrick/httpservlet/abstract.rb
+ 91% [795/871]  lib/webrick/httpservlet/cgi_runner.rb
+ 91% [796/871]  lib/webrick/httpservlet/cgihandler.rb
+ 91% [797/871]  lib/webrick/httpservlet/erbhandler.rb
+ 91% [798/871]  lib/webrick/httpservlet/filehandler.rb
+ 91% [799/871]  lib/webrick/httpservlet/prochandler.rb
+ 91% [800/871]  lib/webrick/httpstatus.rb
+ 91% [801/871]  lib/webrick/httputils.rb
+ 92% [802/871]  lib/webrick/httpversion.rb
+ 92% [803/871]  lib/webrick/log.rb
+ 92% [804/871]  lib/webrick/server.rb
+ 92% [805/871]  lib/webrick/ssl.rb
+ 92% [806/871]  lib/webrick/utils.rb
+ 92% [807/871]  lib/webrick/version.rb
+ 92% [808/871]  lib/yaml.rb
+ 92% [809/871]  lib/yaml/dbm.rb
+ 92% [810/871]  lib/yaml/store.rb
+ 93% [811/871]  load.c
+ 93% [812/871]  loadpath.c
+ 93% [813/871]  localeinit.c
+ 93% [814/871]  main.c
+ 93% [815/871]  marshal.c
+ 93% [816/871]  math.c
+ 93% [817/871]  miniinit.c
+ 93% [818/871]  miniprelude.c
+ 94% [819/871]  node.c
+ 94% [820/871]  numeric.c
+ 94% [821/871]  object.c
+ 94% [822/871]  pack.c
+ 94% [823/871]  parse.c
+ 94% [824/871]  parse.y
+ 94% [825/871]  prelude.c
+ 94% [826/871]  prelude.rb
+ 94% [827/871]  proc.c
+ 95% [828/871]  process.c
+ 95% [829/871]  random.c
+ 95% [830/871]  range.c
+ 95% [831/871]  rational.c
+ 95% [832/871]  rbconfig.rb
+ 95% [833/871]  re.c
+ 95% [834/871]  regcomp.c
+ 95% [835/871]  regenc.c
+ 95% [836/871]  regerror.c
+ 96% [837/871]  regexec.c
+ 96% [838/871]  regparse.c
+ 96% [839/871]  regsyntax.c
+ 96% [840/871]  ruby-runner.c
+ 96% [841/871]  ruby.c
+ 96% [842/871]  rubystub.c
+ 96% [843/871]  safe.c
+ 96% [844/871]  signal.c
+ 97% [845/871]  siphash.c
+ 97% [846/871]  sparc.c
+ 97% [847/871]  sprintf.c
+ 97% [848/871]  st.c
+ 97% [849/871]  strftime.c
+ 97% [850/871]  string.c
+ 97% [851/871]  struct.c
+ 97% [852/871]  symbol.c
+ 97% [853/871]  thread.c
+ 98% [854/871]  thread_pthread.c
+ 98% [855/871]  thread_sync.c
+ 98% [856/871]  thread_win32.c
+ 98% [857/871]  time.c
+ 98% [858/871]  transcode.c
+ 98% [859/871]  util.c
+ 98% [860/871]  variable.c
+ 98% [861/871]  version.c
+ 98% [862/871]  vm.c
+ 99% [863/871]  vm_args.c
+ 99% [864/871]  vm_backtrace.c
+ 99% [865/871]  vm_dump.c
+ 99% [866/871]  vm_eval.c
+ 99% [867/871]  vm_exec.c
+ 99% [868/871]  vm_insnhelper.c
+ 99% [869/871]  vm_method.c
+ 99% [870/871]  vm_trace.c
+100% [871/871]  vsnprintf.c
+
+Generating RI format into /home/foobar/temp/ruby-2.5.3/.ext/rdoc...
+
+
+  Files:        871
+
+  Classes:     1324 ( 565 undocumented)
+  Modules:      286 ( 121 undocumented)
+  Constants:   2181 ( 555 undocumented)
+  Attributes:  1066 ( 251 undocumented)
+  Methods:    10081 (2162 undocumented)
+
+  Total:      14938 (3654 undocumented)
+   75.54% documented
+
+  Elapsed: 73.0s
+
